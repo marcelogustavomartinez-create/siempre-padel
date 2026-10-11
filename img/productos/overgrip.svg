@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+    <rect width="400" height="300" fill="#e4eaf3"/>
+    <ellipse cx="200" cy="262" rx="110" ry="10" fill="#cdd6e4"/>
+    <!-- tres rollos de overgrip -->
+    <g>
+        <rect x="125" y="96" width="150" height="44" rx="22" fill="#ffffff"/>
+        <ellipse cx="253" cy="118" rx="14" ry="22" fill="#c9d2e0"/>
+        <ellipse cx="253" cy="118" rx="5" ry="9" fill="#1c1f26"/>
+        <line x1="155" y1="100" x2="185" y2="136" stroke="#c9d2e0" stroke-width="3"/>
+        <line x1="195" y1="100" x2="225" y2="136" stroke="#c9d2e0" stroke-width="3"/>
+        <rect x="110" y="150" width="150" height="44" rx="22" fill="#d7e84a"/>
+        <ellipse cx="238" cy="172" rx="14" ry="22" fill="#b5c434"/>
+        <ellipse cx="238" cy="172" rx="5" ry="9" fill="#1c1f26"/>
+        <line x1="140" y1="154" x2="170" y2="190" stroke="#b5c434" stroke-width="3"/>
+        <line x1="180" y1="154" x2="210" y2="190" stroke="#b5c434" stroke-width="3"/>
+        <rect x="140" y="204" width="150" height="44" rx="22" fill="#2357a6"/>
+        <ellipse cx="268" cy="226" rx="14" ry="22" fill="#1a4585"/>
+        <ellipse cx="268" cy="226" rx="5" ry="9" fill="#1c1f26"/>
+        <line x1="170" y1="208" x2="200" y2="244" stroke="#1a4585" stroke-width="3"/>
+        <line x1="210" y1="208" x2="240" y2="244" stroke="#1a4585" stroke-width="3"/>
+    </g>
+</svg>

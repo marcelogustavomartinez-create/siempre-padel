@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+    <rect width="400" height="300" fill="#e4eaf3"/>
+    <ellipse cx="200" cy="264" rx="130" ry="11" fill="#cdd6e4"/>
+    <!-- manijas -->
+    <path d="M150 104 C150 56 250 56 250 104" fill="none" stroke="#1c1f26" stroke-width="10"/>
+    <!-- cuerpo del paletero -->
+    <rect x="76" y="100" width="248" height="156" rx="40" fill="#13254a"/>
+    <rect x="76" y="100" width="248" height="34" rx="17" fill="#2357a6"/>
+    <line x1="96" y1="117" x2="304" y2="117" stroke="#d7e84a" stroke-width="3" stroke-dasharray="10 6"/>
+    <!-- bolsillo lateral con silueta de pala -->
+    <rect x="112" y="152" width="120" height="84" rx="16" fill="#1d3466"/>
+    <path d="M172 162 C194 162 202 178 202 192 C202 208 192 218 180 220 L164 220 C152 218 142 208 142 192 C142 178 150 162 172 162 Z" fill="#d7e84a"/>
+    <rect x="166" y="218" width="12" height="16" fill="#d7e84a"/>
+    <rect x="252" y="160" width="46" height="12" rx="4" fill="#d9532b"/>
+</svg>

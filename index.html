@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siempre Pádel: palas de pádel de control, potencia e híbridas, pelotas, overgrips y paleteros.">
+    <title>Siempre Pádel | Palas y accesorios de pádel</title>
+
+    <!-- Datos para cuando se comparte el link en redes -->
+    <meta property="og:title" content="Siempre Pádel">
+    <meta property="og:description" content="Palas y accesorios de pádel. Te ayudamos a elegir la pala según tu juego.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+    <!-- Google Fonts: Barlow Condensed para títulos y Barlow para el texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Enlace para saltear el menú con el teclado (aparece al presionar Tab) -->
+    <a href="#contenido" class="saltar">Saltar al contenido</a>
+
+    <!-- ========== ENCABEZADO ========== -->
+    <header class="encabezado">
+        <div class="contenedor encabezado-contenido">
+            <a href="#inicio" class="logo">
+                <img src="img/logo.svg" alt="" width="44" height="44">
+                <span>Siempre Pádel <small>Palas y accesorios</small></span>
+            </a>
+
+            <!-- Navegación interna de la página -->
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#resenias">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <!-- ========== INICIO / PORTADA ========== -->
+        <section id="inicio" class="portada">
+            <div class="contenedor portada-contenido">
+                <div class="portada-texto">
+                    <h1>Elegí la pala que va con tu juego</h1>
+                    <p>
+                        Palas de control, potencia e híbridas, pelotas, overgrips y paleteros.
+                        Si no sabés cuál te conviene, te asesoramos según tu nivel y tu forma de jugar.
+                    </p>
+                    <a href="#productos" class="boton boton-claro">Ver palas y accesorios</a>
+                </div>
+                <img class="portada-imagen" src="img/hero.svg" alt="Ilustración de una pala de pádel azul y una pelota sobre las líneas de una cancha" width="520" height="440">
+            </div>
+        </section>
+
+        <!-- ========== PRODUCTOS (Flexbox) ========== -->
+        <section id="productos" class="seccion">
+            <div class="contenedor">
+                <h2>Productos</h2>
+                <p class="seccion-intro">
+                    La forma de la pala cambia mucho el juego: la redonda da más control, la de diamante
+                    más potencia y la de lágrima queda en el medio. Tocá "Lo quiero" y te respondemos con
+                    stock y formas de pago.
+                </p>
+
+                <!-- Cada card tiene data-id, data-categoria y data-precio para poder
+                     usarlos más adelante con JavaScript (carrito y filtros) -->
+                <div class="productos">
+
+                    <article class="card" data-id="pala-control" data-categoria="palas" data-precio="189000">
+                        <img loading="lazy" src="img/productos/pala-control.svg" alt="Pala de pádel redonda de color azul con una franja amarilla" width="400" height="300">
+                        <div class="card-cuerpo">
+                            <span class="card-etiqueta">Control</span>
+                            <h3>Pala Control</h3>
+                            <p>Forma redonda, 360 g y goma EVA blanda. Ideal si estás empezando.</p>
+                            <p class="card-precio">$189.000</p>
+                            <a href="#contacto" class="boton">Lo quiero</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-id="pala-hibrida" data-categoria="palas" data-precio="214000">
+                        <img loading="lazy" src="img/productos/pala-hibrida.svg" alt="Pala de pádel con forma de lágrima de color azul oscuro con una franja blanca" width="400" height="300">
+                        <div class="card-cuerpo">
+                            <span class="card-etiqueta">Equilibrio</span>
+                            <h3>Pala Híbrida</h3>
+                            <p>Forma de lágrima, 365 g y punto dulce alto. Para jugadores intermedios.</p>
+                            <p class="card-precio">$214.000</p>
+                            <a href="#contacto" class="boton">Lo quiero</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-id="pala-potencia" data-categoria="palas" data-precio="246000">
+                        <img loading="lazy" src="img/productos/pala-potencia.svg" alt="Pala de pádel con forma de diamante de color naranja" width="400" height="300">
+                        <div class="card-cuerpo">
+                            <span class="card-etiqueta">Potencia</span>
+                            <h3>Pala Potencia</h3>
+                            <p>Forma de diamante, 370 g y cara de carbono. Para remates y juego de ataque.</p>
+                            <p class="card-precio">$246.000</p>
+                            <a href="#contacto" class="boton">Lo quiero</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-id="pelotas-x3" data-categoria="accesorios" data-precio="14500">
+                        <img loading="lazy" src="img/productos/pelotas.svg" alt="Tubo transparente con tres pelotas de pádel amarillas" width="400" height="300">
+                        <div class="card-cuerpo">
+                            <span class="card-etiqueta">Accesorio</span>
+                            <h3>Pelotas x3</h3>
+                            <p>Tubo presurizado. Aptas para cancha de cemento y de césped sintético.</p>
+                            <p class="card-precio">$14.500</p>
+                            <a href="#contacto" class="boton">Lo quiero</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-id="overgrip-x3" data-categoria="accesorios" data-precio="9800">
+                        <img loading="lazy" src="img/productos/overgrip.svg" alt="Tres rollos de overgrip de color blanco, amarillo y azul" width="400" height="300">
+                        <div class="card-cuerpo">
+                            <span class="card-etiqueta">Accesorio</span>
+                            <h3>Overgrip x3</h3>
+                            <p>Antideslizante y con buena absorción. Se cambia en un minuto.</p>
+                            <p class="card-precio">$9.800</p>
+                            <a href="#contacto" class="boton">Lo quiero</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-id="paletero" data-categoria="accesorios" data-precio="98000">
+                        <img loading="lazy" src="img/productos/paletero.svg" alt="Paletero azul oscuro con manijas y un bolsillo lateral" width="400" height="300">
+                        <div class="card-cuerpo">
+                            <span class="card-etiqueta">Accesorio</span>
+                            <h3>Paletero</h3>
+                            <p>Compartimento térmico para dos palas, bolsillo para pelotas y manijas acolchadas.</p>
+                            <p class="card-precio">$98.000</p>
+                            <a href="#contacto" class="boton">Lo quiero</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== RESEÑAS (Grid) ========== -->
+        <section id="resenias" class="seccion seccion-resenias">
+            <div class="contenedor">
+                <h2>Reseñas</h2>
+                <p class="seccion-intro">Lo que cuentan quienes ya juegan con nuestras palas.</p>
+
+                <div class="resenias">
+
+                    <!-- Reseña destacada: ocupa más espacio en la grilla -->
+                    <article class="resenia resenia-destacada">
+                        <figure>
+                            <p class="resenia-estrellas"><span aria-hidden="true">★★★★★</span> 5/5</p>
+                            <blockquote>
+                                <p>
+                                    Llevaba dos años con una pala de diamante y no controlaba la bola.
+                                    Me recomendaron la de lágrima y mejoré un montón en la red.
+                                    Ahora llego a las voleas que antes se me escapaban.
+                                </p>
+                            </blockquote>
+                            <figcaption class="resenia-autor">Gustavo R. <span>Caballito</span></figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="resenia">
+                        <figure>
+                            <p class="resenia-estrellas"><span aria-hidden="true">★★★★★</span> 5/5</p>
+                            <blockquote>
+                                <p>El overgrip dura bastante y no se pone resbaloso con la transpiración.</p>
+                            </blockquote>
+                            <figcaption class="resenia-autor">Natalia F. <span>Morón</span></figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="resenia">
+                        <figure>
+                            <p class="resenia-estrellas"><span aria-hidden="true">★★★★★</span> 5/5</p>
+                            <blockquote>
+                                <p>En el paletero entran dos palas, la ropa y las zapatillas. Es más grande de lo que esperaba.</p>
+                            </blockquote>
+                            <figcaption class="resenia-autor">Ignacio P. <span>Lanús</span></figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="resenia">
+                        <figure>
+                            <p class="resenia-estrellas"><span aria-hidden="true">★★★★☆</span> 4/5</p>
+                            <blockquote>
+                                <p>Las pelotas llegaron con buena presión y aguantaron tres partidos.</p>
+                            </blockquote>
+                            <figcaption class="resenia-autor">Florencia G. <span>Ramos Mejía</span></figcaption>
+                        </figure>
+                    </article>
+
+                    <article class="resenia">
+                        <figure>
+                            <p class="resenia-estrellas"><span aria-hidden="true">★★★★★</span> 5/5</p>
+                            <blockquote>
+                                <p>Antes de comprar mi primera pala me asesoraron por WhatsApp. Muy buena atención.</p>
+                            </blockquote>
+                            <figcaption class="resenia-autor">Damián C. <span>Vicente López</span></figcaption>
+                        </figure>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACTO (Formspree) ========== -->
+        <section id="contacto" class="seccion">
+            <div class="contenedor">
+                <h2>Contacto</h2>
+                <p class="seccion-intro">¿Dudas con el peso o la forma de la pala? Escribinos y te ayudamos a elegir.</p>
+
+                <div class="contacto">
+
+                    <!-- Formulario de contacto: los datos se envían a Formspree.
+                         Reemplazar TU_CODIGO por el código del formulario creado en formspree.io
+                         autocomplete="off": el navegador no guarda lo escrito en los campos -->
+                    <form class="formulario" id="form-contacto" action="https://formspree.io/f/mppqljwp" method="POST" autocomplete="off">
+                        <div class="campo">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="2" maxlength="60">
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required maxlength="100">
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Contanos tu nivel de juego o qué producto te interesa" required minlength="10" maxlength="1000"></textarea>
+                        </div>
+
+                        <!-- Asunto del mail que llega desde Formspree -->
+                        <input type="hidden" name="_subject" value="Consulta desde la web de Siempre Pádel">
+
+                        <button type="submit" class="boton">Enviar consulta</button>
+                    </form>
+
+                    <div class="contacto-info">
+                        <h3>Showroom</h3>
+                        <address>
+                            Calle Cuenca 1902, Villa Santa Rita, Buenos Aires<br>
+                        
+                        </address>
+                        <p>Lunes a viernes de 10 a 19 h<br>Sábados de 10 a 14 h</p>
+
+                        <!-- Mapa de Google Maps embebido con iframe -->
+                        <div class="mapa">
+                            <iframe
+                                src="https://www.google.com/maps?q=Calle+Cuenca+1902,+Buenos+Aires&output=embed"
+                                title="Ubicación del showroom de Siempre Pádel en Google Maps"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer class="pie">
+        <div class="contenedor pie-contenido">
+            <div>
+                <p class="pie-marca">Siempre Pádel</p>
+                <p>Palas y accesorios de pádel.</p>
+            </div>
+
+            <ul class="pie-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#resenias">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <p class="pie-copy">&copy; 2026 Siempre Pádel. Proyecto realizado para el curso de Front End de Talento Tech.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

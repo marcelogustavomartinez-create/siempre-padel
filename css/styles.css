@@ -1,0 +1,596 @@
+/* =========================================================
+   Siempre Pádel - Hoja de estilos principal
+   Enfoque mobile first: primero los estilos para celular y
+   después las media queries para pantallas más grandes.
+   ========================================================= */
+
+
+/* ---------- Variables de color y tipografía ---------- */
+:root {
+    --azul-cancha: #2357a6;
+    --azul-noche: #13254a;
+    --azul-oscuro: #0c1a36;
+    --celeste: #e4eaf3;
+    --fondo: #f5f7fb;
+    --naranja: #b8401c;
+    --amarillo-pelota: #d7e84a;
+    --texto: #1c1f26;
+
+    --fuente-titulos: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    --fuente-texto: "Barlow", "Segoe UI", Arial, sans-serif;
+}
+
+
+/* ---------- Reset básico ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Compensa la altura del header fijo al usar los links internos */
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: var(--fondo);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-titulos);
+    line-height: 1.1;
+}
+
+/* Títulos principales en mayúsculas, con estilo deportivo */
+h1,
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Contenedor centrado que se usa en todas las secciones */
+.contenedor {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+/* ---------- Botones ---------- */
+.boton {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--azul-cancha);
+    color: #ffffff;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.boton:hover {
+    background-color: var(--azul-noche);
+}
+
+.boton-claro {
+    background-color: var(--amarillo-pelota);
+    color: var(--azul-noche);
+}
+
+.boton-claro:hover {
+    background-color: #e3f07a;
+}
+
+/* Enlace "Saltar al contenido": queda oculto arriba y baja al recibir el foco */
+.saltar {
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    z-index: 20;
+    padding: 0.6rem 1rem;
+    background-color: var(--amarillo-pelota);
+    color: var(--azul-noche);
+    font-weight: 700;
+}
+
+.saltar:focus {
+    top: 1rem;
+}
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--amarillo-pelota);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   HEADER Y NAVEGACIÓN
+   ========================================================= */
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--azul-noche);
+    color: #ffffff;
+}
+
+.encabezado-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    font-family: var(--fuente-titulos);
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.logo small {
+    display: block;
+    font-family: var(--fuente-texto);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--amarillo-pelota);
+}
+
+/* Lista de navegación */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem 1.2rem;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 0.3rem 0;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+}
+
+.menu a:hover {
+    color: var(--amarillo-pelota);
+    border-bottom-color: var(--amarillo-pelota);
+}
+
+
+/* =========================================================
+   PORTADA (sección con background degradado)
+   ========================================================= */
+.portada {
+    color: #ffffff;
+    /* Dos degradados combinados: un brillo radial y el azul de base */
+    background:
+        radial-gradient(circle at 80% 30%, rgba(215, 232, 74, 0.15), transparent 55%),
+        linear-gradient(160deg, var(--azul-cancha) 0%, var(--azul-noche) 100%);
+    padding: 3rem 0;
+}
+
+.portada-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.portada-texto {
+    max-width: 34rem;
+}
+
+.portada h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.portada p {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+    color: #d6dff0;
+}
+
+.portada-imagen {
+    width: 100%;
+    max-width: 440px;
+}
+
+
+/* ---------- Secciones generales ---------- */
+.seccion {
+    padding: 4rem 0;
+}
+
+.seccion h2 {
+    font-size: 2.2rem;
+    color: var(--azul-cancha);
+}
+
+.seccion-intro {
+    margin: 0.4rem 0 2.2rem;
+    max-width: 40rem;
+}
+
+
+/* =========================================================
+   PRODUCTOS (Flexbox)
+   ========================================================= */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    /* Crece y se achica, con un ancho base de 280px */
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #d3dbe8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-cuerpo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.5rem;
+    padding: 1.2rem;
+}
+
+/* Etiqueta con el tipo de producto */
+.card-etiqueta {
+    align-self: flex-start;
+    padding: 0.15rem 0.7rem;
+    border-radius: 20px;
+    background-color: var(--celeste);
+    color: var(--azul-cancha);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+}
+
+.card-precio {
+    margin-top: auto;
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--naranja);
+}
+
+.card .boton {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESEÑAS (Grid)
+   ========================================================= */
+.seccion-resenias {
+    background-color: var(--celeste);
+}
+
+/* En celular: una sola columna */
+.resenias {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+}
+
+.resenia {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.5rem;
+    background-color: var(--fondo);
+    border-left: 5px solid var(--azul-cancha);
+    border-radius: 4px;
+}
+
+.resenia-destacada {
+    background-color: var(--azul-cancha);
+    color: #ffffff;
+    border-left-color: var(--amarillo-pelota);
+}
+
+.resenia-destacada blockquote {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+/* La figura ocupa toda la reseña para dejar el autor siempre abajo */
+.resenia figure {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.8rem;
+}
+
+/* Naranja sobre fondo claro para que las estrellas se lean bien */
+.resenia-estrellas {
+    color: var(--naranja);
+    font-weight: 700;
+}
+
+.resenia-estrellas span {
+    letter-spacing: 2px;
+}
+
+.resenia-destacada .resenia-estrellas {
+    color: var(--amarillo-pelota);
+}
+
+.resenia-autor {
+    margin-top: auto;
+    font-weight: 700;
+}
+
+.resenia-autor span {
+    display: block;
+    font-weight: 400;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   CONTACTO (formulario + mapa)
+   ========================================================= */
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #d3dbe8;
+    border-radius: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.campo label {
+    font-weight: 700;
+}
+
+.campo input,
+.campo textarea {
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #b4c0d4;
+    border-radius: 6px;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    background-color: var(--fondo);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+/* Borde rojo solo cuando el usuario ya escribió algo que no es válido */
+.campo input:user-invalid,
+.campo textarea:user-invalid {
+    border-color: #a33a1f;
+}
+
+.contacto-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-info p,
+.contacto-info address {
+    margin-bottom: 0.8rem;
+}
+
+.contacto-info address {
+    font-style: normal;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 280px;
+    border: 0;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.pie {
+    background-color: var(--azul-noche);
+    color: #d6dff0;
+    padding: 2.5rem 0 1.5rem;
+}
+
+.pie-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pie-marca {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.pie-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+.pie-links a {
+    text-decoration: none;
+}
+
+.pie-links a:hover {
+    color: var(--amarillo-pelota);
+}
+
+.pie-copy {
+    font-size: 0.9rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   MEDIA QUERIES
+   ========================================================= */
+
+/* Tablets (desde 600px) */
+@media (min-width: 600px) {
+
+    /* Reseñas en dos columnas, la destacada ocupa todo el ancho */
+    .resenias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resenia-destacada {
+        grid-column: 1 / -1;
+    }
+
+    .formulario {
+        padding: 2rem;
+    }
+}
+
+/* Pantallas medianas (desde 768px) */
+@media (min-width: 768px) {
+
+    .portada h1 {
+        font-size: 3.8rem;
+    }
+
+    .seccion h2 {
+        font-size: 3rem;
+    }
+
+    .encabezado-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Contacto: formulario e información lado a lado */
+    .contacto {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .formulario {
+        flex: 3;
+    }
+
+    .contacto-info {
+        flex: 2;
+    }
+
+    .pie-contenido {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pie-copy {
+        width: 100%;
+    }
+}
+
+/* Escritorio (desde 1024px) */
+@media (min-width: 1024px) {
+
+    .portada {
+        padding: 4.5rem 0;
+    }
+
+    .portada h1 {
+        font-size: 4.6rem;
+    }
+
+    .portada-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .portada-imagen {
+        flex: 0 1 460px;
+    }
+
+    /* Reseñas en tres columnas: la destacada ocupa dos filas a la izquierda */
+    .resenias {
+        grid-template-columns: 1.4fr 1fr 1fr;
+    }
+
+    .resenia-destacada {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        padding: 2.2rem;
+    }
+
+    .mapa iframe {
+        height: 320px;
+    }
+}

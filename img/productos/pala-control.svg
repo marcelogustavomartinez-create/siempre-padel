@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+    <defs>
+        <clipPath id="cara">
+            <path d="M200 30 C252 30 276 72 276 116 C276 162 246 196 214 204 L186 204 C154 196 124 162 124 116 C124 72 148 30 200 30 Z"/>
+        </clipPath>
+    </defs>
+    <rect width="400" height="300" fill="#e4eaf3"/>
+    <ellipse cx="200" cy="278" rx="80" ry="9" fill="#cdd6e4"/>
+    <g transform="rotate(-12 200 150)">
+        <!-- mango con grip -->
+        <rect x="188" y="200" width="24" height="76" rx="6" fill="#1c1f26"/>
+        <g stroke="#3a3f4b" stroke-width="3">
+            <line x1="188" y1="214" x2="212" y2="222"/>
+            <line x1="188" y1="230" x2="212" y2="238"/>
+            <line x1="188" y1="246" x2="212" y2="254"/>
+            <line x1="188" y1="262" x2="212" y2="270"/>
+        </g>
+        <!-- cabeza de la pala -->
+        <path d="M200 30 C252 30 276 72 276 116 C276 162 246 196 214 204 L186 204 C154 196 124 162 124 116 C124 72 148 30 200 30 Z" fill="#2357a6"/>
+        <g clip-path="url(#cara)">
+            <rect x="100" y="120" width="200" height="22" fill="#d7e84a"/>
+            <g fill="#000000" opacity="0.28">
+            <circle cx="150" cy="70" r="3.2"/>
+            <circle cx="166" cy="70" r="3.2"/>
+            <circle cx="182" cy="70" r="3.2"/>
+            <circle cx="198" cy="70" r="3.2"/>
+            <circle cx="214" cy="70" r="3.2"/>
+            <circle cx="230" cy="70" r="3.2"/>
+            <circle cx="246" cy="70" r="3.2"/>
+            <circle cx="158" cy="84" r="3.2"/>
+            <circle cx="174" cy="84" r="3.2"/>
+            <circle cx="190" cy="84" r="3.2"/>
+            <circle cx="206" cy="84" r="3.2"/>
+            <circle cx="222" cy="84" r="3.2"/>
+            <circle cx="238" cy="84" r="3.2"/>
+            <circle cx="150" cy="98" r="3.2"/>
+            <circle cx="166" cy="98" r="3.2"/>
+            <circle cx="182" cy="98" r="3.2"/>
+            <circle cx="198" cy="98" r="3.2"/>
+            <circle cx="214" cy="98" r="3.2"/>
+            <circle cx="230" cy="98" r="3.2"/>
+            <circle cx="246" cy="98" r="3.2"/>
+            <circle cx="158" cy="112" r="3.2"/>
+            <circle cx="174" cy="112" r="3.2"/>
+            <circle cx="190" cy="112" r="3.2"/>
+            <circle cx="206" cy="112" r="3.2"/>
+            <circle cx="222" cy="112" r="3.2"/>
+            <circle cx="238" cy="112" r="3.2"/>
+            <circle cx="150" cy="126" r="3.2"/>
+            <circle cx="166" cy="126" r="3.2"/>
+            <circle cx="182" cy="126" r="3.2"/>
+            <circle cx="198" cy="126" r="3.2"/>
+            <circle cx="214" cy="126" r="3.2"/>
+            <circle cx="230" cy="126" r="3.2"/>
+            <circle cx="246" cy="126" r="3.2"/>
+            <circle cx="158" cy="140" r="3.2"/>
+            <circle cx="174" cy="140" r="3.2"/>
+            <circle cx="190" cy="140" r="3.2"/>
+            <circle cx="206" cy="140" r="3.2"/>
+            <circle cx="222" cy="140" r="3.2"/>
+            <circle cx="238" cy="140" r="3.2"/>
+            <circle cx="150" cy="154" r="3.2"/>
+            <circle cx="166" cy="154" r="3.2"/>
+            <circle cx="182" cy="154" r="3.2"/>
+            <circle cx="198" cy="154" r="3.2"/>
+            <circle cx="214" cy="154" r="3.2"/>
+            <circle cx="230" cy="154" r="3.2"/>
+            <circle cx="246" cy="154" r="3.2"/>
+            <circle cx="158" cy="167" r="3.2"/>
+            <circle cx="174" cy="167" r="3.2"/>
+            <circle cx="190" cy="167" r="3.2"/>
+            <circle cx="206" cy="167" r="3.2"/>
+            <circle cx="222" cy="167" r="3.2"/>
+            <circle cx="238" cy="167" r="3.2"/>
+            </g>
+        </g>
+        <path d="M200 30 C252 30 276 72 276 116 C276 162 246 196 214 204 L186 204 C154 196 124 162 124 116 C124 72 148 30 200 30 Z" fill="none" stroke="#1c1f26" stroke-width="5"/>
+        <!-- puente (corazon de la pala) -->
+        <path d="M200 182 L186 204 L214 204 Z" fill="#e4eaf3" stroke="#1c1f26" stroke-width="4"/>
+    </g>
+</svg>

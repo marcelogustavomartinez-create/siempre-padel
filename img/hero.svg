@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440">
+    <!-- lineas de la cancha -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="4">
+        <rect x="40" y="40" width="440" height="360"/>
+        <line x1="40" y1="220" x2="480" y2="220"/>
+        <line x1="260" y1="100" x2="260" y2="340"/>
+        <line x1="40" y1="100" x2="480" y2="100"/>
+        <line x1="40" y1="340" x2="480" y2="340"/>
+    </g>
+    <!-- pala grande -->
+    <g transform="rotate(-24 250 220)">
+        <rect x="236" y="300" width="30" height="100" rx="8" fill="#0c1a36"/>
+        <path d="M251 40 C318 40 346 96 346 150 C346 208 308 250 268 260 L234 260 C194 250 156 208 156 150 C156 96 184 40 251 40 Z" fill="#2357a6" stroke="#0c1a36" stroke-width="7"/>
+        <rect x="160" y="140" width="182" height="26" fill="#d7e84a"/>
+        <path d="M251 236 L232 266 L270 266 Z" fill="#13254a" stroke="#0c1a36" stroke-width="5"/>
+        <rect x="234" y="258" width="34" height="46" fill="#0c1a36"/>
+    </g>
+    <!-- pelota -->
+    <circle cx="402" cy="318" r="40" fill="#d7e84a"/>
+    <path d="M370 298 Q402 322 434 298" fill="none" stroke="#ffffff" stroke-width="4"/>
+    <path d="M370 340 Q402 316 434 340" fill="none" stroke="#ffffff" stroke-width="4"/>
+</svg>
