@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marcelogustavomartinez-create.github.io/siempre-padel/sitemap.xml

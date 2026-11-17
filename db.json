@@ -1,0 +1,136 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "titulo": "Pala Control Azul",
+      "categoria": "palas",
+      "tipo": "Control",
+      "precio": 189000,
+      "imagen": "img/productos/pala-control-azul.svg",
+      "descripcion": "Forma redonda, 360 g y goma EVA blanda. Ideal si estás empezando.",
+      "alt": "Pala de pádel redonda de color azul con una franja amarilla",
+      "destacado": true
+    },
+    {
+      "id": 2,
+      "titulo": "Pala Control Blanca",
+      "categoria": "palas",
+      "tipo": "Control",
+      "precio": 176000,
+      "imagen": "img/productos/pala-control-blanca.svg",
+      "descripcion": "Forma redonda, 355 g y núcleo blando. Liviana y fácil de manejar.",
+      "alt": "Pala de pádel redonda de color blanco con una franja azul",
+      "destacado": false
+    },
+    {
+      "id": 3,
+      "titulo": "Pala Híbrida Noche",
+      "categoria": "palas",
+      "tipo": "Equilibrio",
+      "precio": 214000,
+      "imagen": "img/productos/pala-hibrida-noche.svg",
+      "descripcion": "Forma de lágrima, 365 g y punto dulce alto. Para jugadores intermedios.",
+      "alt": "Pala de pádel con forma de lágrima de color azul oscuro con una franja blanca",
+      "destacado": true
+    },
+    {
+      "id": 4,
+      "titulo": "Pala Híbrida Bordó",
+      "categoria": "palas",
+      "tipo": "Equilibrio",
+      "precio": 221000,
+      "imagen": "img/productos/pala-hibrida-bordo.svg",
+      "descripcion": "Forma de lágrima, 365 g y cara de fibra de vidrio. Buena salida de bola.",
+      "alt": "Pala de pádel con forma de lágrima de color bordó con una franja amarilla",
+      "destacado": false
+    },
+    {
+      "id": 5,
+      "titulo": "Pala Potencia Naranja",
+      "categoria": "palas",
+      "tipo": "Potencia",
+      "precio": 246000,
+      "imagen": "img/productos/pala-potencia-naranja.svg",
+      "descripcion": "Forma de diamante, 370 g y cara de carbono. Para remates y juego de ataque.",
+      "alt": "Pala de pádel con forma de diamante de color naranja",
+      "destacado": true
+    },
+    {
+      "id": 6,
+      "titulo": "Pala Potencia Carbono",
+      "categoria": "palas",
+      "tipo": "Potencia",
+      "precio": 268000,
+      "imagen": "img/productos/pala-potencia-carbono.svg",
+      "descripcion": "Forma de diamante, 375 g y carbono 3K. Para jugadores avanzados.",
+      "alt": "Pala de pádel con forma de diamante de color gris oscuro con una franja naranja",
+      "destacado": false
+    },
+    {
+      "id": 7,
+      "titulo": "Pelotas x3",
+      "categoria": "accesorios",
+      "tipo": "Pelotas",
+      "precio": 14500,
+      "imagen": "img/productos/pelotas.svg",
+      "descripcion": "Tubo presurizado. Aptas para cancha de cemento y de césped sintético.",
+      "alt": "Tubo transparente con tres pelotas de pádel amarillas",
+      "destacado": false
+    },
+    {
+      "id": 8,
+      "titulo": "Pack de pelotas x12",
+      "categoria": "accesorios",
+      "tipo": "Pelotas",
+      "precio": 52000,
+      "imagen": "img/productos/pelotas-pack.svg",
+      "descripcion": "Cuatro tubos de tres pelotas. Rinde para un mes de partidos.",
+      "alt": "Cuatro tubos transparentes con pelotas de pádel amarillas",
+      "destacado": false
+    },
+    {
+      "id": 9,
+      "titulo": "Overgrip x3",
+      "categoria": "accesorios",
+      "tipo": "Grip",
+      "precio": 9800,
+      "imagen": "img/productos/overgrip.svg",
+      "descripcion": "Antideslizante y con buena absorción. Se cambia en un minuto.",
+      "alt": "Tres rollos de overgrip de color blanco, amarillo y azul",
+      "destacado": false
+    },
+    {
+      "id": 10,
+      "titulo": "Protector de marco",
+      "categoria": "accesorios",
+      "tipo": "Protección",
+      "precio": 7500,
+      "imagen": "img/productos/protector.svg",
+      "descripcion": "Cinta transparente que cuida el borde de la pala de los golpes contra el piso.",
+      "alt": "Pala de pádel gris con una cinta protectora celeste en el borde superior",
+      "destacado": false
+    },
+    {
+      "id": 11,
+      "titulo": "Muñequeras x2",
+      "categoria": "accesorios",
+      "tipo": "Indumentaria",
+      "precio": 8900,
+      "imagen": "img/productos/munequeras.svg",
+      "descripcion": "De toalla, absorben la transpiración para que no llegue al grip.",
+      "alt": "Dos muñequeras de toalla, una azul y otra azul oscuro",
+      "destacado": false
+    },
+    {
+      "id": 12,
+      "titulo": "Paletero",
+      "categoria": "accesorios",
+      "tipo": "Bolsos",
+      "precio": 98000,
+      "imagen": "img/productos/paletero.svg",
+      "descripcion": "Compartimento térmico para dos palas, bolsillo para pelotas y manijas acolchadas.",
+      "alt": "Paletero azul oscuro con manijas y un bolsillo lateral",
+      "destacado": false
+    }
+  ]
+}
