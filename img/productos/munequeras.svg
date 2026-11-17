@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+    <rect width="400" height="300" fill="#e4eaf3"/>
+    <ellipse cx="200" cy="250" rx="120" ry="10" fill="#cdd6e4"/>
+    <!-- dos muñequeras de toalla -->
+    <g>
+        <rect x="88" y="110" width="104" height="120" rx="20" fill="#2357a6"/>
+        <ellipse cx="140" cy="110" rx="52" ry="16" fill="#1a4585"/>
+        <ellipse cx="140" cy="110" rx="36" ry="9" fill="#e4eaf3"/>
+        <rect x="88" y="160" width="104" height="14" fill="#d7e84a"/>
+    </g>
+    <g>
+        <rect x="208" y="110" width="104" height="120" rx="20" fill="#13254a"/>
+        <ellipse cx="260" cy="110" rx="52" ry="16" fill="#0c1a36"/>
+        <ellipse cx="260" cy="110" rx="36" ry="9" fill="#e4eaf3"/>
+        <rect x="208" y="160" width="104" height="14" fill="#d9532b"/>
+    </g>
+</svg>

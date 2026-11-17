@@ -1,7 +1,8 @@
 /* =========================================================
-   Siempre Pádel - Hoja de estilos principal
-   Enfoque mobile first: primero los estilos para celular y
-   después las media queries para pantallas más grandes.
+   Siempre Pádel - Hoja de estilos
+   Se carga después de Bootstrap para ajustar sus estilos y
+   sumar los propios del sitio. Enfoque mobile first: primero
+   celular y después las media queries para pantallas grandes.
    ========================================================= */
 
 
@@ -15,19 +16,19 @@
     --naranja: #b8401c;
     --amarillo-pelota: #d7e84a;
     --texto: #1c1f26;
+    --borde: #d3dbe8;
+    --error: #a33a1f;
 
     --fuente-titulos: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
     --fuente-texto: "Barlow", "Segoe UI", Arial, sans-serif;
+
+    /* Colores de los links de Bootstrap con los de la marca */
+    --bs-link-color-rgb: 35, 87, 166;
+    --bs-link-hover-color-rgb: 19, 37, 74;
 }
 
 
-/* ---------- Reset básico ---------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ---------- Base ---------- */
 html {
     scroll-behavior: smooth;
     /* Compensa la altura del header fijo al usar los links internos */
@@ -36,27 +37,18 @@ html {
 
 body {
     font-family: var(--fuente-texto);
-    font-size: 1.125rem;
-    line-height: 1.6;
+    font-size: 1.05rem;
     color: var(--texto);
     background-color: var(--fondo);
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    color: inherit;
 }
 
 h1,
 h2,
 h3 {
     font-family: var(--fuente-titulos);
+    font-weight: 700;
     line-height: 1.1;
+    color: var(--azul-noche);
 }
 
 /* Títulos principales en mayúsculas, con estilo deportivo */
@@ -66,41 +58,9 @@ h2 {
     letter-spacing: 0.5px;
 }
 
-/* Contenedor centrado que se usa en todas las secciones */
-.contenedor {
-    width: 90%;
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-
-/* ---------- Botones ---------- */
-.boton {
-    display: inline-block;
-    padding: 0.7rem 1.4rem;
-    border: none;
-    border-radius: 6px;
-    background-color: var(--azul-cancha);
-    color: #ffffff;
-    font-family: var(--fuente-texto);
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.boton:hover {
-    background-color: var(--azul-noche);
-}
-
-.boton-claro {
-    background-color: var(--amarillo-pelota);
-    color: var(--azul-noche);
-}
-
-.boton-claro:hover {
-    background-color: #e3f07a;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Enlace "Saltar al contenido": queda oculto arriba y baja al recibir el foco */
@@ -108,11 +68,11 @@ h2 {
     position: absolute;
     top: -4rem;
     left: 1rem;
-    z-index: 20;
+    z-index: 2000;
     padding: 0.6rem 1rem;
     background-color: var(--amarillo-pelota);
     color: var(--azul-noche);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .saltar:focus {
@@ -123,9 +83,61 @@ h2 {
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
+select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid var(--amarillo-pelota);
-    outline-offset: 3px;
+    outline: 3px solid var(--naranja);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+
+/* Bootstrap marca el foco con una sombra azul; acá se usa el contorno de arriba */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--azul-cancha);
+    box-shadow: none;
+}
+
+
+/* ---------- Botones propios ---------- */
+.btn-cancha {
+    background-color: var(--azul-cancha);
+    border-color: var(--azul-cancha);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-cancha:hover,
+.btn-cancha:focus {
+    background-color: var(--azul-noche);
+    border-color: var(--azul-noche);
+    color: #ffffff;
+}
+
+.btn-pelota {
+    background-color: var(--amarillo-pelota);
+    border-color: var(--amarillo-pelota);
+    color: var(--azul-noche);
+    font-weight: 600;
+}
+
+.btn-pelota:hover,
+.btn-pelota:focus {
+    background-color: #e3f07a;
+    border-color: #e3f07a;
+    color: var(--azul-noche);
+}
+
+.btn-borde {
+    border: 1px solid var(--azul-cancha);
+    color: var(--azul-cancha);
+    font-weight: 600;
+}
+
+.btn-borde:hover,
+.btn-borde:focus {
+    background-color: var(--celeste);
+    color: var(--azul-noche);
 }
 
 
@@ -135,26 +147,16 @@ textarea:focus-visible {
 .encabezado {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
     background-color: var(--azul-noche);
-    color: #ffffff;
-}
-
-.encabezado-contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    text-decoration: none;
     font-family: var(--fuente-titulos);
-    font-size: 1.7rem;
+    font-size: 1.35rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -162,43 +164,76 @@ textarea:focus-visible {
 .logo small {
     display: block;
     font-family: var(--fuente-texto);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--amarillo-pelota);
 }
 
 /* Lista de navegación */
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.3rem 1.2rem;
-    list-style: none;
-}
-
-.menu a {
-    display: block;
-    padding: 0.3rem 0;
-    text-decoration: none;
+.menu .nav-link {
+    color: #ffffff;
     font-weight: 500;
     border-bottom: 2px solid transparent;
 }
 
-.menu a:hover {
+.menu .nav-link:hover,
+.menu .nav-link.active {
     color: var(--amarillo-pelota);
     border-bottom-color: var(--amarillo-pelota);
 }
 
+/* Acceso al carrito con el contador */
+.carrito-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    background-color: var(--amarillo-pelota);
+    color: var(--azul-noche);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.carrito-link:hover {
+    background-color: #e3f07a;
+    color: var(--azul-noche);
+}
+
+/* En celular la palabra "Carrito" se oculta a la vista pero la leen los lectores de pantalla */
+.carrito-texto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.contador-carrito {
+    min-width: 1.6rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 20px;
+    background-color: var(--azul-noche);
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
 
 /* =========================================================
-   PORTADA (sección con background degradado)
+   PORTADA Y CABECERA DE PÁGINAS (background degradado)
    ========================================================= */
-.portada {
+.portada,
+.cabecera-pagina {
     color: #ffffff;
     /* Dos degradados combinados: un brillo radial y el azul de base */
     background:
         radial-gradient(circle at 80% 30%, rgba(215, 232, 74, 0.15), transparent 55%),
         linear-gradient(160deg, var(--azul-cancha) 0%, var(--azul-noche) 100%);
+}
+
+.portada {
     padding: 3rem 0;
 }
 
@@ -209,46 +244,115 @@ textarea:focus-visible {
     gap: 2rem;
 }
 
-.portada-texto {
-    max-width: 34rem;
-}
-
 .portada h1 {
+    color: #ffffff;
     font-size: 2.8rem;
-    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .portada p {
     font-size: 1.2rem;
-    margin-bottom: 1.8rem;
     color: #d6dff0;
+    max-width: 34rem;
 }
 
 .portada-imagen {
     width: 100%;
-    max-width: 440px;
+    max-width: 420px;
+}
+
+.cabecera-pagina {
+    padding: 2rem 0;
+}
+
+.cabecera-pagina h1 {
+    color: #ffffff;
+    font-size: 2.6rem;
+    margin: 0;
+}
+
+.cabecera-pagina p {
+    margin: 0.4rem 0 0;
+    color: #d6dff0;
+}
+
+/* Ruta de navegación (breadcrumb) sobre fondo azul */
+.cabecera-pagina .breadcrumb {
+    margin-bottom: 0.6rem;
+}
+
+.cabecera-pagina .breadcrumb a {
+    color: var(--amarillo-pelota);
+}
+
+.cabecera-pagina .breadcrumb-item.active,
+.cabecera-pagina .breadcrumb-item + .breadcrumb-item::before {
+    color: #d6dff0;
 }
 
 
 /* ---------- Secciones generales ---------- */
 .seccion {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
 }
 
 .seccion h2 {
     font-size: 2.2rem;
-    color: var(--azul-cancha);
+    color: var(--azul-noche);
 }
 
 .seccion-intro {
-    margin: 0.4rem 0 2.2rem;
-    max-width: 40rem;
+    margin: 0.4rem 0 2rem;
+    max-width: 42rem;
 }
 
 
 /* =========================================================
-   PRODUCTOS (Flexbox)
+   CATEGORÍAS Y FORMAS DE PALA (inicio)
+   ========================================================= */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.categoria {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.6rem;
+    border-radius: 10px;
+    background-color: var(--azul-noche);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.categoria h3 {
+    font-size: 1.8rem;
+    color: var(--amarillo-pelota);
+}
+
+.categoria:hover {
+    background-color: var(--azul-cancha);
+    color: #ffffff;
+}
+
+.forma-pala {
+    height: 100%;
+    padding: 1.4rem;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.forma-pala h3 {
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   PRODUCTOS (Flexbox con flex-wrap)
    ========================================================= */
 .productos {
     display: flex;
@@ -256,31 +360,22 @@ textarea:focus-visible {
     gap: 1.5rem;
 }
 
-.card {
-    /* Crece y se achica, con un ancho base de 280px */
-    flex: 1 1 280px;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border: 1px solid #d3dbe8;
+.producto {
+    /* Crece y se achica, con un ancho base de 260px */
+    flex: 1 1 260px;
+    max-width: 100%;
+    border: 1px solid var(--borde);
     border-radius: 10px;
     overflow: hidden;
 }
 
-.card img {
-    width: 100%;
-}
-
-.card-cuerpo {
+.producto-cuerpo {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     gap: 0.5rem;
-    padding: 1.2rem;
 }
 
-/* Etiqueta con el tipo de producto */
-.card-etiqueta {
+.producto-etiqueta {
     align-self: flex-start;
     padding: 0.15rem 0.7rem;
     border-radius: 20px;
@@ -292,21 +387,60 @@ textarea:focus-visible {
     letter-spacing: 1px;
 }
 
-.card h3 {
-    font-size: 1.4rem;
+.producto-titulo {
+    font-size: 1.45rem;
+    margin: 0;
 }
 
-.card-precio {
-    margin-top: auto;
+.producto-descripcion {
+    margin: 0;
+}
+
+.producto-precio {
+    margin: auto 0 0.4rem;
     font-family: var(--fuente-titulos);
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--naranja);
 }
 
-.card .boton {
+/* Barra de filtros del catálogo */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filtros-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.btn-filtro {
+    border: 1px solid var(--azul-cancha);
+    color: var(--azul-cancha);
+    font-weight: 600;
+}
+
+.btn-filtro:hover {
+    background-color: var(--celeste);
+    color: var(--azul-noche);
+}
+
+/* Filtro elegido (aria-pressed lo cambia script.js) */
+.btn-filtro[aria-pressed="true"] {
+    background-color: var(--azul-noche);
+    border-color: var(--azul-noche);
+    color: #ffffff;
+}
+
+.estado-carga {
     width: 100%;
-    text-align: center;
+    padding: 1rem;
+    font-weight: 500;
 }
 
 
@@ -326,12 +460,23 @@ textarea:focus-visible {
 
 .resenia {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
     padding: 1.5rem;
     background-color: var(--fondo);
     border-left: 5px solid var(--azul-cancha);
     border-radius: 4px;
+}
+
+/* La figura ocupa toda la reseña para dejar el autor siempre abajo */
+.resenia figure {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.8rem;
+    margin: 0;
+}
+
+.resenia blockquote {
+    margin: 0;
 }
 
 .resenia-destacada {
@@ -343,19 +488,12 @@ textarea:focus-visible {
 .resenia-destacada blockquote {
     font-family: var(--fuente-titulos);
     font-size: 1.6rem;
-    line-height: 1.4;
-}
-
-/* La figura ocupa toda la reseña para dejar el autor siempre abajo */
-.resenia figure {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 0.8rem;
+    line-height: 1.3;
 }
 
 /* Naranja sobre fondo claro para que las estrellas se lean bien */
 .resenia-estrellas {
+    margin: 0;
     color: var(--naranja);
     font-weight: 700;
 }
@@ -370,14 +508,103 @@ textarea:focus-visible {
 
 .resenia-autor {
     margin-top: auto;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .resenia-autor span {
     display: block;
     font-weight: 400;
     font-size: 0.95rem;
-    opacity: 0.8;
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   CARRITO
+   ========================================================= */
+.carrito-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.carrito-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.carrito-item img {
+    width: 96px;
+    border-radius: 6px;
+}
+
+.carrito-item-info {
+    flex: 1 1 180px;
+}
+
+.carrito-item-info h3 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.carrito-item-info p {
+    margin: 0;
+}
+
+/* Botones de restar y sumar con el campo de cantidad en el medio */
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.cantidad input {
+    width: 4rem;
+    text-align: center;
+}
+
+.carrito-item-subtotal {
+    min-width: 7rem;
+    margin: 0;
+    font-weight: 600;
+    text-align: right;
+}
+
+.carrito-resumen {
+    position: sticky;
+    top: 100px;
+    padding: 1.5rem;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.carrito-resumen h2 {
+    font-size: 1.8rem;
+}
+
+.carrito-total {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--naranja);
+}
+
+.carrito-vacio,
+.compra-exitosa {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid var(--borde);
+    text-align: center;
 }
 
 
@@ -393,51 +620,26 @@ textarea:focus-visible {
 .formulario {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.1rem;
     padding: 1.5rem;
-    background-color: #ffffff;
-    border: 1px solid #d3dbe8;
+    border: 1px solid var(--borde);
     border-radius: 10px;
+    background-color: #ffffff;
 }
 
-.campo {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
+.formulario label {
+    font-weight: 600;
 }
 
-.campo label {
-    font-weight: 700;
+.error-campo {
+    min-height: 1.2rem;
+    margin: 0.25rem 0 0;
+    color: var(--error);
+    font-size: 0.9rem;
 }
 
-.campo input,
-.campo textarea {
-    padding: 0.7rem 0.9rem;
-    border: 1px solid #b4c0d4;
-    border-radius: 6px;
-    font-family: var(--fuente-texto);
-    font-size: 1rem;
-    background-color: var(--fondo);
-}
-
-.campo textarea {
-    resize: vertical;
-}
-
-/* Borde rojo solo cuando el usuario ya escribió algo que no es válido */
-.campo input:user-invalid,
-.campo textarea:user-invalid {
-    border-color: #a33a1f;
-}
-
-.contacto-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.contacto-info p,
-.contacto-info address {
-    margin-bottom: 0.8rem;
+.estado-formulario:empty {
+    display: none;
 }
 
 .contacto-info address {
@@ -449,6 +651,33 @@ textarea:focus-visible {
     height: 280px;
     border: 0;
     border-radius: 10px;
+}
+
+
+/* =========================================================
+   MENSAJES AL USUARIO (aparecen abajo a la derecha)
+   ========================================================= */
+.mensajes {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 320px;
+}
+
+.mensaje {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background-color: var(--azul-noche);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mensaje-error {
+    background-color: var(--error);
 }
 
 
@@ -468,6 +697,7 @@ textarea:focus-visible {
 }
 
 .pie-marca {
+    margin: 0;
     font-family: var(--fuente-titulos);
     font-size: 1.5rem;
     font-weight: 700;
@@ -478,10 +708,13 @@ textarea:focus-visible {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
 .pie-links a {
+    color: #d6dff0;
     text-decoration: none;
 }
 
@@ -490,9 +723,10 @@ textarea:focus-visible {
 }
 
 .pie-copy {
-    font-size: 0.9rem;
+    margin: 0;
     padding-top: 1.2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
 }
 
 
@@ -502,6 +736,18 @@ textarea:focus-visible {
 
 /* Tablets (desde 600px) */
 @media (min-width: 600px) {
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .carrito-texto {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+    }
 
     /* Reseñas en dos columnas, la destacada ocupa todo el ancho */
     .resenias {
@@ -525,12 +771,16 @@ textarea:focus-visible {
     }
 
     .seccion h2 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
-    .encabezado-contenido {
-        flex-direction: row;
-        justify-content: space-between;
+    .cabecera-pagina h1 {
+        font-size: 3.2rem;
+    }
+
+    /* Dos cards por fila como máximo de ancho */
+    .producto {
+        max-width: calc((100% - 1.5rem) / 2);
     }
 
     /* Contacto: formulario e información lado a lado */
@@ -566,17 +816,17 @@ textarea:focus-visible {
         padding: 4.5rem 0;
     }
 
-    .portada h1 {
-        font-size: 4.6rem;
-    }
-
     .portada-contenido {
         flex-direction: row;
         justify-content: space-between;
     }
 
+    .portada h1 {
+        font-size: 4.6rem;
+    }
+
     .portada-imagen {
-        flex: 0 1 460px;
+        flex: 0 1 440px;
     }
 
     /* Reseñas en tres columnas: la destacada ocupa dos filas a la izquierda */
@@ -588,6 +838,11 @@ textarea:focus-visible {
         grid-column: 1;
         grid-row: 1 / span 2;
         padding: 2.2rem;
+    }
+
+    /* Las cards no se estiran de más cuando quedan pocas en la fila */
+    .producto {
+        max-width: calc((100% - 3rem) / 3);
     }
 
     .mapa iframe {
